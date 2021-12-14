@@ -1,7 +1,7 @@
 const req = require('express/lib/request');
 const TelegramBot = require('node-telegram-bot-api');
-const token = '2141430836:AAH80t6CbYOEnokRYsIUAlA5c9jyU9BmtXM';
-const bot = new TelegramBot(token, {polling: true});
+const config = require('./cfg.json');
+const bot = new TelegramBot(config.token, {polling: true});
 const {gameOptions, againOptions} = require('./options.js')
 const chats = {
 
